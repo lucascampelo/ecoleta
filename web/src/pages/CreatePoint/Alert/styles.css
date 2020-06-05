@@ -1,0 +1,27 @@
+.alert-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1100;
+
+    background-color: rgba(9, 5, 16, 0.9);
+}
+
+.alert-component span {
+    display: flex;
+    align-self: center;
+    color: #FFF;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+.alert-component span.icon {
+    color: #34CB79;
+    font-size: 4.5em;
+}
