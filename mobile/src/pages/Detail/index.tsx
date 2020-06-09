@@ -14,6 +14,7 @@ interface RouteParams {
 interface Data {
   point: {
     image: string;
+    image_url: string;
     name: string;
     email: string;
     whatsapp: string;
@@ -64,14 +65,14 @@ const Detail = () => {
                 <TouchableOpacity onPress={handleNavigateBack}>
                     <Feather name="arrow-left" size={20} color="#34CB79" />
                 </TouchableOpacity>
-
-                <Image style={styles.pointImage} source={{uri: data.point.image}} />
+                
+                <Image style={styles.pointImage} source={{uri: data.point.image_url}} />
 
                 <Text style={styles.pointName}>{data.point.name}</Text>
                 <Text style={styles.pointItems}>{data.items.map(item => item.title).join(', ')}</Text>
 
                 <View style={styles.address}>
-                    <Text style={styles.addressTitle}>Endereco</Text>
+                    <Text style={styles.addressTitle}>Endereço</Text>
                     <Text style={styles.addressContent}>{data.point.city}, {data.point.uf}</Text>
                 </View>
             </View>
